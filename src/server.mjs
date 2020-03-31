@@ -69,7 +69,7 @@ const clearWand = () => {
 const run = () => {
     if (wand) {
         io.emit('wand', wand);
-        console.log(wand);
+        // console.log(wand);
         clearWand();
     }
 }

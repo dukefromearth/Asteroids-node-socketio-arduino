@@ -14,6 +14,8 @@ export default class Background {
     }
     draw(ctx) {
         ctx.drawImage(this.imgs[0], 0, 0, this.canWidth, this.canHeight);
+        // ctx.fillStyle = 'black';
+        // ctx.fillRect(0, 0, this.canWidth, this.canHeight);
         for (let i = 1; i < this.imgs.length; i++) {
             // draw image 1 
             ctx.drawImage(this.imgs[i], 0, this.imgHeights[i], this.canWidth, this.canHeight);
@@ -23,5 +25,12 @@ export default class Background {
             if (this.imgHeights[i] >= this.canHeight) this.imgHeights[i] = 0;
         }
     }
+    drawFog(ctx){
+        // draw image 1 
+        ctx.drawImage(this.imgs[2], 0, this.imgHeights[2], this.canWidth, this.canHeight);
+        // draw image 2 
+        ctx.drawImage(this.imgs[2], 0, this.imgHeights[2] - this.canHeight, this.canWidth, this.canHeight);
+    }
+
 }
 

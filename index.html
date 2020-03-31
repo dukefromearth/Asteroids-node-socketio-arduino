@@ -1,21 +1,83 @@
+"css.lint.unknownAtRules": "ignore"
 <html>
+    
 <style>
     img {
         display: none;
     }
-    #body{
-        background: 'black';
-        background-color: 'black';
-    }
+
     canvas {
         position: relative;
         display: block;
-        margin:auto;
+        margin: auto;
+    }
+
+    @mixin anim($name, $dur, $iterate) {
+        animation-name: $name;
+        animation-duration: $dur;
+        animation-iteration-count: $iterate;
+    }
+
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        background: black;
+    }
+
+    p {
+        font-family: 'VT323', ;
+        font-size: 8em;
+        text-align: center;
+        @include anim(example, 1s, infinite);
+    }
+
+    @keyframes example {
+        0% {
+            color: lime;
+            text-shadow: 0 0 20px green
+        }
+
+        25% {
+            color: green;
+            text-shadow: 2px 2px 2px lime;
+            transform: translate(-2px, 1px)
+        }
+
+        40% {
+            color: lime;
+            text-shadow: none;
+            transform: translate(0, 0)
+        }
+
+        50% {
+            color: green;
+            text-shadow: 5px 5px 2px blue, -5px -5px 2px red;
+            transform: translate(0px, 5px)
+        }
+
+        70% {
+            color: lime;
+            text-shadow: none;
+            transform: translate(0, 0)
+        }
+
+        80% {
+            color: lime;
+            text-shadow: 0 0 20px green;
+            transform: translate(-2px, 1px)
+        }
+
+        100% {
+            color: lime;
+            text-shadow: none;
+        }
     }
 </style>
 
 <head>
     <link rel="shortcut icon" href="">
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
     <img id="burst1" src="./src/assets/burst1.png"></img>
     <img id="bkgd_0" src="./src/assets/bkgd_0.png"></img>
     <img id="bkgd_1" src="./src/assets/bkgd_1.png"></img>
@@ -26,8 +88,13 @@
     <img id="bkgd_6" src="./src/assets/bkgd_6.png"></img>
     <img id="bkgd_7" src="./src/assets/bkgd_7.png"></img>
     <img id="ship" src="./src/assets//ship.png"></img>
+    <img id="ship2" src="./src/assets//ship2.png"></img>
     <img id="asteroid" src="./src/assets/asteroid.png"></img>
     <img id="ast_explode" src="./src/assets/ast_explode.png"></img>
+    <img id="ast_explode2" src="./src/assets/ast_explode2.png"></img>
+    <img id="explosions2" src="./src/assets/explosions2.png"></img>
+    <img id="particle" src="./src/assets/particle.png"></img>
+    <img id="missiles" src="./src/assets/missiles.png"></img>
 </head>
 
 <body>
