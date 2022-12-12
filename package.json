@@ -4,7 +4,7 @@
   "description": "Arduino IoT beat maker with Node.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "rbush": "^3.0.1",
     "serialport": "^8.0.7",
     "socket.io": "^2.3.0"
